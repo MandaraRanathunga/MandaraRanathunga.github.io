@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    
+    <canvas id="bgCanvas"></canvas>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">My Portfolio</h1>
+            <div class="nav-links">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero/About Section -->
+        <section id="about" class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Left Side: Photo -->
+                    <div class="hero-photo">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/profile.jpg" alt="Your Name" class="profile-image">
+                            <div class="photo-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Info Dashboard -->
+                    <div class="hero-info">
+                        <h1 class="hero-name gradient-text">Mandara Ranathunga</h1>
+                        <p class="hero-degree">Bachelor of Science in Computer Engineering</p>
+                        <p class="hero-tagline">Project Manager | UI/UX Enthusiast</p>
+                        
+                        <!-- Mini Contact Dashboard -->
+                        <div class="mini-dashboard">
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="dashboard-item">
+                                <span class="dashboard-icon">💼</span>
+                                <span class="dashboard-text">LinkedIn</span>
+                            </a>
+                            <a href="mailto:your.email@example.com" class="dashboard-item">
+                                <span class="dashboard-icon">✉️</span>
+                                <span class="dashboard-text">your.email@example.com</span>
+                            </a>
+                            <a href="tel:+1234567890" class="dashboard-item">
+                                <span class="dashboard-icon">📱</span>
+                                <span class="dashboard-text">+94 78 690 0028</span>
+                            </a>
+                            <a href="https://github.com/yourusername" target="_blank" class="dashboard-item">
+                                <span class="dashboard-icon">💻</span>
+                                <span class="dashboard-text">GitHub</span>
+                            </a>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="hero-buttons">
+                            <a href="assets/cv/your-cv.pdf" download class="btn btn-primary">
+                                📄 Download CV
+                            </a>
+                            <a href="#contact" class="btn btn-secondary scroll-btn">
+                                💬 Contact Me
+                            </a>
+                        </div>
+
+                        <!-- Short Bio -->
+                        <p class="hero-bio">
+                            A passionate Full Stack Developer specializing in building exceptional 
+                            digital experiences. I combine creativity with technical expertise to 
+                            create innovative web solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="icon">🏆</span>
+                    <h2 class="section-title">My Skills</h2>
+                    <p class="section-subtitle">Technologies I work with</p>
+                </div>
+                <div id="skills-dashboard" class="skills-grid"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="icon">💻</span>
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">Some of my recent work</p>
+                </div>
+                <div id="projects-grid" class="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="icon">💼</span>
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">My professional journey</p>
+                </div>
+                <div id="experience-list"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container text-center">
+                <span class="icon">✉️</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    I'm always open to discussing new projects, creative ideas, or opportunities.
+                </p>
+                <div class="contact-card">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                    <div class="contact-info">
+                        <a href="mailto:your.email@example.com" class="contact-email">
+                            ✉️ your.email@example.com
+                        </a>
+                        <div class="contact-buttons">
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">LinkedIn</a>
+                            <a href="https://github.com/yourusername" target="_blank" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/skills-dashboard.js"></script>
+</body>
+</html>

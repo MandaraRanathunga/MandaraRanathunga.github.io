@@ -1,7 +1,6 @@
-# System files
+# Dependencies
+node_modules/
+
+# System Files
 .DS_Store
 Thumbs.db
-
-# Editor directories
-.vscode/
-.idea/

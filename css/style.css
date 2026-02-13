@@ -101,7 +101,7 @@ main {
 }
 
 .section-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 3rem;
 }
 
@@ -302,7 +302,7 @@ main {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #d1d5db;
-    text-align: left;
+    text-align: justify;
 }
 
 .location-tag {
@@ -673,6 +673,8 @@ main {
 
 /* Footer */
 .footer {
+    position: relative;
+    z-index: 10;
     background: rgba(20, 20, 40, 0.6);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(100, 200, 255, 0.1);

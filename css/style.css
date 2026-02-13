@@ -121,6 +121,12 @@ main {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #60a5fa, #a855f7, rgba(168, 85, 247, 0.1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
 }
 
 .gradient-text {
@@ -383,13 +389,21 @@ main {
 }
 
 /* Projects Grid */
-.projects-grid {
+.projects-grid,
+.volunteering-grid,
+.education-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.project-card {
+.volunteering-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card,
+.volunteering-card,
+.education-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(100, 200, 255, 0.3);
@@ -398,7 +412,9 @@ main {
     transition: all 0.3s;
 }
 
-.project-card:hover {
+.project-card:hover,
+.volunteering-card:hover,
+.education-card:hover {
     transform: translateY(-10px);
     border-color: rgba(100, 200, 255, 0.6);
 }
@@ -785,7 +801,8 @@ main {
     }
 
     .skills-grid,
-    .projects-grid {
+    .projects-grid,
+    .volunteering-grid {
         grid-template-columns: 1fr;
     }
 

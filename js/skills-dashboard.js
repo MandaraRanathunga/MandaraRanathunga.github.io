@@ -49,6 +49,50 @@ const experiencesData = [
     }
 ];
 
+// Volunteering Data
+const volunteeringData = [
+    {
+        role: 'Treasurer',
+        organization: 'BCS Student Chapter KDU',
+        period: '2025 - 2026',
+        description: 'Managed financial records and budget allocation for student chapter events and initiatives.'
+    },
+    {
+        role: 'Finance Lead',
+        organization: 'BCS Student Chapter',
+        period: '2024 - 2025',
+        description: 'Managed financial planning and budget allocation for student chapter initiatives.'
+    },
+    {
+        role: 'Program Team Lead',
+        organization: 'IEEE Student Branch',
+        period: '2024 - 2025',
+        description: 'Led the planning and execution of technical programs and student events.'
+    },
+    {
+        role: 'PR Director',
+        organization: 'Rotaract Club of KDU',
+        period: '2023 - 2024',
+        description: 'Led public relations campaigns, managed social media presence, and coordinated promotional activities.'
+    }
+];
+
+// Education Data
+const educationData = [
+    {
+        degree: 'BSc in Computer Engineering',
+        institution: 'General Sir John Kotelawala Defence University',
+        period: '2022 - 2026',
+        description: 'Currently pursuing undergraduate degree specializing in computing systems.'
+    },
+    {
+        degree: 'GCE Advanced Level',
+        institution: 'High School',
+        period: '2021',
+        description: 'Physical Science Stream'
+    }
+];
+
 // Render Skills Dashboard
 function renderSkills() {
     const skillsContainer = document.getElementById('skills-dashboard');
@@ -136,10 +180,55 @@ function renderExperience() {
     });
 }
 
+// Render Volunteering
+function renderVolunteering() {
+    const container = document.getElementById('volunteering-grid');
+    
+    volunteeringData.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'volunteering-card animate-fadeInUp';
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        card.innerHTML = `
+            <h3 class="project-title">${item.role}</h3>
+            <div class="experience-meta" style="margin-bottom: 1rem;">
+                <span class="experience-company">${item.organization}</span>
+            </div>
+            <p class="project-description">${item.description}</p>
+            <span class="tech-tag">${item.period}</span>
+        `;
+        
+        container.appendChild(card);
+    });
+}
+
+// Render Education
+function renderEducation() {
+    const container = document.getElementById('education-grid');
+    
+    educationData.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'education-card animate-fadeInUp';
+        card.style.animationDelay = `${index * 0.2}s`;
+        
+        card.innerHTML = `
+            <h3 class="project-title">${item.degree}</h3>
+            <div class="experience-meta" style="margin-bottom: 1rem;">
+                <span class="experience-company">${item.institution}</span>
+            </div>
+            <p class="project-description">${item.description}</p>
+            <span class="tech-tag">${item.period}</span>
+        `;
+        
+        container.appendChild(card);
+    });
+}
+
 // Initialize all content
 document.addEventListener('DOMContentLoaded', () => {
     renderSkills();
     renderProjects();
     renderExperience();
+    renderVolunteering();
+    renderEducation();
 });
-
